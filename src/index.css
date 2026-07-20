@@ -1,0 +1,364 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600;700&family=Inter:wght@300;400;500;600;700&display=swap');
+
+/* Futuristic Hacker Design System */
+
+@layer base {
+  :root {
+    /* Dark futuristic palette */
+    --background: 220 20% 4%;
+    --foreground: 24 20% 96%;
+
+    --card: 220 20% 6%;
+    --card-foreground: 24 20% 96%;
+
+    --popover: 220 20% 6%;
+    --popover-foreground: 24 20% 96%;
+
+    /* Copper Orange primary */
+    --primary: 24 85% 55%;
+    --primary-foreground: 220 20% 4%;
+
+    /* Darker secondary */
+    --secondary: 220 20% 12%;
+    --secondary-foreground: 24 20% 90%;
+
+    --muted: 220 15% 15%;
+    --muted-foreground: 24 15% 65%;
+
+    /* Warm Gold/Amber accent */
+    --accent: 35 90% 50%;
+    --accent-foreground: 220 20% 4%;
+
+    --destructive: 0 80% 50%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 24 15% 18%;
+    --input: 220 20% 12%;
+    --ring: 24 85% 55%;
+
+    --radius: 0.5rem;
+
+    /* Custom gradients */
+    --gradient-primary: linear-gradient(135deg, hsl(24 85% 55%), hsl(35 90% 50%));
+    --gradient-glow: linear-gradient(180deg, hsl(24 85% 55% / 0.2), transparent);
+    --gradient-card: linear-gradient(145deg, hsl(220 20% 8%), hsl(220 20% 5%));
+    
+    /* Glow effects */
+    --glow-primary: 0 0 20px hsl(24 85% 55% / 0.5), 0 0 40px hsl(24 85% 55% / 0.3);
+    --glow-accent: 0 0 20px hsl(35 90% 50% / 0.5);
+    --glow-text: 0 0 10px hsl(24 85% 55% / 0.8);
+
+    /* Sidebar vars */
+    --sidebar-background: 220 20% 6%;
+    --sidebar-foreground: 180 100% 95%;
+    --sidebar-primary: 180 100% 50%;
+    --sidebar-primary-foreground: 220 20% 4%;
+    --sidebar-accent: 220 20% 12%;
+    --sidebar-accent-foreground: 180 100% 90%;
+    --sidebar-border: 180 30% 20%;
+    --sidebar-ring: 180 100% 50%;
+  }
+
+  .dark {
+    --background: 220 20% 4%;
+    --foreground: 180 100% 95%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply bg-background text-foreground font-sans antialiased;
+    font-family: 'Inter', sans-serif;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: 'JetBrains Mono', monospace;
+  }
+}
+
+@layer components {
+  /* Neon glow button */
+  .btn-neon {
+    @apply relative px-8 py-3 font-mono font-semibold text-primary border-2 border-primary rounded-lg;
+    @apply transition-all duration-300 ease-out;
+    @apply hover:bg-primary hover:text-primary-foreground;
+    box-shadow: var(--glow-primary);
+  }
+
+  .btn-neon:hover {
+    box-shadow: 0 0 30px hsl(180 100% 50% / 0.7), 0 0 60px hsl(180 100% 50% / 0.4);
+  }
+
+  /* Solid neon button */
+  .btn-neon-solid {
+    @apply relative px-8 py-3 font-mono font-semibold bg-primary text-primary-foreground rounded-lg;
+    @apply transition-all duration-300 ease-out;
+    box-shadow: var(--glow-primary);
+  }
+
+  .btn-neon-solid:hover {
+    @apply bg-accent;
+    box-shadow: 0 0 30px hsl(180 100% 50% / 0.7), 0 0 60px hsl(180 100% 50% / 0.4);
+    transform: translateY(-2px);
+  }
+
+  /* Terminal text effect */
+  .terminal-text {
+    font-family: 'JetBrains Mono', monospace;
+    @apply text-primary;
+    text-shadow: var(--glow-text);
+  }
+
+  /* Grid pattern background */
+  .grid-pattern {
+    background-image: 
+      linear-gradient(hsl(180 30% 20% / 0.1) 1px, transparent 1px),
+      linear-gradient(90deg, hsl(180 30% 20% / 0.1) 1px, transparent 1px);
+    background-size: 50px 50px;
+  }
+
+  /* Gradient border card */
+  .card-glow {
+    @apply relative overflow-hidden rounded-xl;
+    background: var(--gradient-card);
+    border: 1px solid hsl(180 30% 25% / 0.3);
+  }
+
+  .card-glow::before {
+    content: '';
+    @apply absolute inset-0 opacity-0 transition-opacity duration-300;
+    background: linear-gradient(135deg, hsl(180 100% 50% / 0.1), transparent);
+  }
+
+  .card-glow:hover::before {
+    @apply opacity-100;
+  }
+
+  .card-glow:hover {
+    border-color: hsl(180 100% 50% / 0.5);
+    box-shadow: 0 0 30px hsl(180 100% 50% / 0.15);
+  }
+
+  /* Section divider */
+  .section-divider {
+    @apply w-full h-px bg-gradient-to-r from-transparent via-primary/50 to-transparent;
+  }
+
+  /* Glitch text */
+  .glitch {
+    @apply relative;
+  }
+
+  /* Scanline effect */
+  .scanlines::after {
+    content: '';
+    @apply absolute inset-0 pointer-events-none;
+    background: repeating-linear-gradient(
+      0deg,
+      transparent,
+      transparent 2px,
+      hsl(180 100% 50% / 0.03) 2px,
+      hsl(180 100% 50% / 0.03) 4px
+    );
+  }
+}
+
+@layer utilities {
+  .text-glow {
+    text-shadow: var(--glow-text);
+  }
+
+  .animate-float {
+    animation: float 6s ease-in-out infinite;
+  }
+
+  .animate-pulse-glow {
+    animation: pulse-glow 2s ease-in-out infinite;
+  }
+
+  .animate-typing {
+    animation: typing 3.5s steps(40, end), blink-caret 0.75s step-end infinite;
+  }
+
+  /* Futuristic glitch effect */
+  .animate-glitch {
+    animation: glitch 2s ease-in-out infinite;
+  }
+
+  /* Cyber scan line */
+  .animate-scan {
+    animation: scan 3s linear infinite;
+  }
+
+  /* Holographic shimmer */
+  .animate-holographic {
+    animation: holographic 3s ease-in-out infinite;
+    background: linear-gradient(
+      90deg,
+      hsl(180 100% 50% / 0.1),
+      hsl(160 100% 45% / 0.3),
+      hsl(180 100% 50% / 0.1)
+    );
+    background-size: 200% 100%;
+  }
+
+  /* Matrix rain effect class */
+  .animate-matrix {
+    animation: matrix-fade 4s ease-in-out infinite;
+  }
+
+  /* Neon flicker */
+  .animate-neon-flicker {
+    animation: neon-flicker 3s ease-in-out infinite;
+  }
+
+  /* Cyber border */
+  .cyber-border {
+    position: relative;
+  }
+
+  .cyber-border::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    padding: 2px;
+    border-radius: inherit;
+    background: linear-gradient(135deg, hsl(180 100% 50%), hsl(160 100% 45%), hsl(180 100% 50%));
+    background-size: 200% 200%;
+    animation: gradient-rotate 3s linear infinite;
+    -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+    mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+    -webkit-mask-composite: xor;
+    mask-composite: exclude;
+  }
+
+  /* Hover scale with glow */
+  .hover-glow-scale {
+    transition: all 0.3s ease;
+  }
+
+  .hover-glow-scale:hover {
+    transform: scale(1.05) translateY(-5px);
+    box-shadow: 0 20px 40px hsl(180 100% 50% / 0.2);
+  }
+
+  @keyframes float {
+    0%, 100% { transform: translateY(0px); }
+    50% { transform: translateY(-10px); }
+  }
+
+  @keyframes pulse-glow {
+    0%, 100% { 
+      box-shadow: 0 0 20px hsl(180 100% 50% / 0.5), 0 0 40px hsl(180 100% 50% / 0.3);
+    }
+    50% { 
+      box-shadow: 0 0 30px hsl(180 100% 50% / 0.7), 0 0 60px hsl(180 100% 50% / 0.4);
+    }
+  }
+
+  @keyframes typing {
+    from { width: 0; }
+    to { width: 100%; }
+  }
+
+  @keyframes blink-caret {
+    from, to { border-color: transparent; }
+    50% { border-color: hsl(180 100% 50%); }
+  }
+
+  @keyframes glitch {
+    0%, 100% {
+      transform: translate(0);
+      filter: hue-rotate(0deg);
+    }
+    10% {
+      transform: translate(-2px, 2px);
+      filter: hue-rotate(90deg);
+    }
+    20% {
+      transform: translate(2px, -2px);
+      filter: hue-rotate(180deg);
+    }
+    30% {
+      transform: translate(-1px, 1px);
+      filter: hue-rotate(270deg);
+    }
+    40%, 90% {
+      transform: translate(0);
+      filter: hue-rotate(0deg);
+    }
+  }
+
+  @keyframes scan {
+    0% {
+      background-position: 0% 0%;
+    }
+    100% {
+      background-position: 0% 100%;
+    }
+  }
+
+  @keyframes holographic {
+    0%, 100% {
+      background-position: 0% 50%;
+    }
+    50% {
+      background-position: 100% 50%;
+    }
+  }
+
+  @keyframes matrix-fade {
+    0%, 100% {
+      opacity: 0.3;
+    }
+    50% {
+      opacity: 1;
+    }
+  }
+
+  @keyframes neon-flicker {
+    0%, 100% {
+      opacity: 1;
+      text-shadow: 0 0 10px hsl(180 100% 50% / 0.8), 0 0 20px hsl(180 100% 50% / 0.6), 0 0 30px hsl(180 100% 50% / 0.4);
+    }
+    92% {
+      opacity: 1;
+    }
+    93% {
+      opacity: 0.8;
+    }
+    94% {
+      opacity: 1;
+    }
+    96% {
+      opacity: 0.9;
+    }
+    97% {
+      opacity: 1;
+    }
+  }
+
+  @keyframes gradient-rotate {
+    0% {
+      background-position: 0% 50%;
+    }
+    50% {
+      background-position: 100% 50%;
+    }
+    100% {
+      background-position: 0% 50%;
+    }
+  }
+}
