@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react';
-import { Menu, X, Terminal } from 'lucide-react';
+import { Menu, X } from 'lucide-react';
 import { motion, AnimatePresence } from 'framer-motion';
 
 const navItems = [
@@ -48,7 +48,11 @@ const Navbar = () => {
               scrollToSection('#hero');
             }}
           >
-            <Terminal className="w-6 h-6 text-primary group-hover:text-glow transition-all" />
+            <img 
+              src="/logo.jpg" 
+              alt="StackHard Logo" 
+              className="w-8 h-8 object-contain rounded-md border border-primary/20 group-hover:border-primary transition-all duration-300"
+            />
             <span className="font-mono font-bold text-lg text-foreground group-hover:text-primary transition-colors">
               {'StackHard'}
             </span>

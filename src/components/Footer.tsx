@@ -1,4 +1,4 @@
-import { Terminal, Github, Linkedin } from 'lucide-react';
+
 
 const Footer = () => {
   const currentYear = new Date().getFullYear();
@@ -10,7 +10,11 @@ const Footer = () => {
           {/* Logo & Copyright */}
           <div className="flex flex-col items-center md:items-start gap-2">
             <a href="#hero" className="flex items-center gap-2 group">
-              <Terminal className="w-5 h-5 text-primary" />
+              <img 
+                src="/logo.jpg" 
+                alt="StackHard Logo" 
+                className="w-6 h-6 object-contain rounded-md" 
+              />
               <span className="font-mono font-bold text-foreground">{'StackHard'}</span>
             </a>
             <p className="text-sm text-muted-foreground">
@@ -18,41 +22,10 @@ const Footer = () => {
             </p>
           </div>
 
-          {/* Social Links */}
-          <div className="flex items-center gap-4">
-            <a
-              href="https://github.com/Tomy-basabe"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="p-2 text-muted-foreground hover:text-primary transition-colors"
-              aria-label="GitHub"
-            >
-              <Github className="w-5 h-5" />
-            </a>
-            <a
-              href="https://www.linkedin.com/in/tomas-basabe-333899340/"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="p-2 text-muted-foreground hover:text-primary transition-colors"
-              aria-label="LinkedIn"
-            >
-              <Linkedin className="w-5 h-5" />
-            </a>
-          </div>
-
-          {/* Made with code & Hidden Logo */}
-          <div className="flex items-center gap-2">
-            <p className="font-mono text-xs text-muted-foreground">
-              Hecho con <span className="text-primary">{'<código />'}</span> y ☕
-            </p>
-            <div className="w-5 h-5 rounded overflow-hidden bg-transparent select-none pointer-events-none" aria-hidden="true">
-              <img 
-                src="/logo.jpg" 
-                alt="StackHard Hidden Logo" 
-                className="w-full h-full object-contain opacity-0 pointer-events-none select-none" 
-              />
-            </div>
-          </div>
+          {/* Made with code */}
+          <p className="font-mono text-xs text-muted-foreground">
+            Hecho con <span className="text-primary">{'<código />'}</span> y ☕
+          </p>
         </div>
       </div>
     </footer>
