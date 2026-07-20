@@ -40,10 +40,19 @@ const Footer = () => {
             </a>
           </div>
 
-          {/* Made with code */}
-          <p className="font-mono text-xs text-muted-foreground">
-            Hecho con <span className="text-primary">{'<código />'}</span> y ☕
-          </p>
+          {/* Made with code & Hidden Logo */}
+          <div className="flex items-center gap-2">
+            <p className="font-mono text-xs text-muted-foreground">
+              Hecho con <span className="text-primary">{'<código />'}</span> y ☕
+            </p>
+            <div className="w-5 h-5 rounded overflow-hidden bg-transparent select-none pointer-events-none" aria-hidden="true">
+              <img 
+                src="/logo.jpg" 
+                alt="StackHard Hidden Logo" 
+                className="w-full h-full object-contain opacity-0 pointer-events-none select-none" 
+              />
+            </div>
+          </div>
         </div>
       </div>
     </footer>
