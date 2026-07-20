@@ -4,112 +4,91 @@ import { ChevronLeft, ChevronRight } from 'lucide-react';
 import ProjectCard, { type Project } from './portfolio/ProjectCard';
 import ProjectGalleryModal from './portfolio/ProjectGalleryModal';
 
-// T.A.B.E images
-import tabeCover from '@/assets/projects/tabe/cover.jpg';
+// Live previews (Screenshots provided by user)
+import carrizoPreview from '@/assets/projects/live-previews/carrizo.png';
+import tabePreview from '@/assets/projects/live-previews/tabe.png';
+import senderosPreview from '@/assets/projects/live-previews/senderos.png';
+import kanelaPreview from '@/assets/projects/live-previews/kanela.png';
+import kartingPreview from '@/assets/projects/live-previews/karting.png';
+import cincoPreview from '@/assets/projects/live-previews/cinco.png';
+
+// Sub-screenshots for galleries
 import tabeDashboard from '@/assets/projects/tabe/dashboard.png';
 import tabePlanCarrera from '@/assets/projects/tabe/plan-carrera.png';
 import tabeNotion from '@/assets/projects/tabe/notion.png';
 import tabeFlashcards from '@/assets/projects/tabe/flashcards.png';
-import tabeMarketplace from '@/assets/projects/tabe/marketplace.png';
-import tabeBiblioteca from '@/assets/projects/tabe/biblioteca.png';
-import tabeCalendario from '@/assets/projects/tabe/calendario.png';
-import tabePomodoro from '@/assets/projects/tabe/pomodoro.png';
-import tabeMetricas from '@/assets/projects/tabe/metricas.png';
-import tabeBosque from '@/assets/projects/tabe/bosque.png';
 
-// T.A.B.E Academy images
-import tabeAcademyCover from '@/assets/projects/tabe-academy/cover.jpg';
-import tabeAcademyLogin from '@/assets/projects/tabe-academy/login.png';
-import tabeAcademyPanelProfesor from '@/assets/projects/tabe-academy/panel-profesor.png';
-import tabeAcademyAlumnos from '@/assets/projects/tabe-academy/alumnos.png';
-import tabeAcademyCuadernillos from '@/assets/projects/tabe-academy/cuadernillos.png';
-import tabeAcademyUniversidades from '@/assets/projects/tabe-academy/universidades.png';
-import tabeAcademyVerAlumno from '@/assets/projects/tabe-academy/ver-alumno.png';
-import tabeAcademySeleccionUniversidad from '@/assets/projects/tabe-academy/seleccion-universidad.png';
-import tabeAcademyMaterias from '@/assets/projects/tabe-academy/materias.png';
-import tabeAcademyNiveles from '@/assets/projects/tabe-academy/niveles.png';
-
-// Senderos del Puente images
-import senderosCover from '@/assets/projects/senderos/cover.jpg';
 import senderosHero from '@/assets/projects/senderos/hero.png';
 import senderosNosotros from '@/assets/projects/senderos/nosotros.png';
 import senderosAliados from '@/assets/projects/senderos/aliados.png';
 import senderosMaquinaria from '@/assets/projects/senderos/maquinaria.png';
-import senderosMarcas from '@/assets/projects/senderos/marcas.png';
-import senderosContacto from '@/assets/projects/senderos/contacto.png';
-
-// 5INCO Indumentaria images
-import cincoCover from '@/assets/projects/5inco/cover.jpg';
-import cincoHero from '@/assets/projects/5inco/hero.png';
-import cincoCatalogo from '@/assets/projects/5inco/catalogo.png';
-import cincoContacto from '@/assets/projects/5inco/contacto.png';
-import cincoAdmin from '@/assets/projects/5inco/admin.png';
 
 const projects: Project[] = [
   {
     title: 'T.A.B.E – Sistema Académico',
-    category: 'Aplicación Web',
-    description: 'Plataforma integral para mejorar el rendimiento académico. Dashboard con métricas, plan de carrera, editor tipo Notion, flashcards con marketplace, biblioteca de recursos, calendario académico, método Pomodoro, sistema de bosque virtual gamificado, sala de estudio social y asistente IA.',
+    category: 'Aplicación Web / SaaS',
+    description: 'Plataforma integral para mejorar el rendimiento académico. Dashboard con métricas, plan de carrera, editor tipo Notion, flashcards, biblioteca de recursos y calendario.',
     tech: ['React', 'TypeScript', 'Supabase', 'Tailwind', 'Framer Motion'],
-    coverImage: tabeCover,
+    coverImage: tabePreview,
     screenshots: [
+      tabePreview,
       tabeDashboard,
       tabePlanCarrera,
       tabeNotion,
       tabeFlashcards,
-      tabeMarketplace,
-      tabeBiblioteca,
-      tabeCalendario,
-      tabePomodoro,
-      tabeMetricas,
-      tabeBosque,
     ],
-  },
-  {
-    title: 'T.A.B.E Academy – Gestión Académica',
-    category: 'Aplicación Web',
-    description: 'Plataforma para profesores de clases particulares. Panel de gestión de alumnos, cuadernillos y tareas por niveles, chat integrado profesor-alumno, seguimiento de progreso en tiempo real, soporte para secundario y universitario con múltiples universidades configurables.',
-    tech: ['React', 'TypeScript', 'Supabase', 'Tailwind', 'Framer Motion'],
-    coverImage: tabeAcademyCover,
-    screenshots: [
-      tabeAcademyLogin,
-      tabeAcademyPanelProfesor,
-      tabeAcademyAlumnos,
-      tabeAcademyCuadernillos,
-      tabeAcademyUniversidades,
-      tabeAcademyVerAlumno,
-      tabeAcademySeleccionUniversidad,
-      tabeAcademyMaterias,
-      tabeAcademyNiveles,
-    ],
+    liveUrl: 'https://www.tabe.software',
   },
   {
     title: 'Senderos del Puente',
     category: 'Web Institucional',
-    description: 'Página web institucional para lavadero de zanahorias de alcance nacional. Muestra todo el proceso desde el cultivo hasta la distribución con videos, imágenes de alta calidad y animaciones dinámicas. Presenta las marcas emblemáticas y transmite frescura, calidad y profesionalismo.',
-    tech: ['React', 'TypeScript', 'Tailwind', 'Framer Motion', 'Video'],
-    coverImage: senderosCover,
+    description: 'Página web institucional para lavadero de zanahorias de alcance nacional. Muestra todo el proceso desde el cultivo hasta la distribución con videos, imágenes y animaciones dinámicas.',
+    tech: ['React', 'TypeScript', 'Tailwind', 'Framer Motion'],
+    coverImage: senderosPreview,
     screenshots: [
+      senderosPreview,
       senderosHero,
       senderosNosotros,
       senderosAliados,
       senderosMaquinaria,
-      senderosMarcas,
-      senderosContacto,
     ],
+    liveUrl: 'https://senderos-del-puente.vercel.app',
+  },
+  {
+    title: 'Carnes Carrizo',
+    category: 'E-commerce / Catálogo',
+    description: 'Sitio web moderno para carnicería y distribuidora de carne premium. Permite ver ofertas, catálogo de cortes, ubicación y contacto directo de forma rápida.',
+    tech: ['React', 'TypeScript', 'Tailwind', 'Framer Motion'],
+    coverImage: carrizoPreview,
+    screenshots: [carrizoPreview],
+    liveUrl: 'https://carnes-carrizo.vercel.app',
+  },
+  {
+    title: 'Kanela Food',
+    category: 'Carta Digital / Web',
+    description: 'Carta digital interactiva y sitio web para cafetería y hamburguesería en Coquimbito. Interfaz fluida y atractiva optimizada para móviles.',
+    tech: ['React', 'TypeScript', 'Tailwind', 'Framer Motion'],
+    coverImage: kanelaPreview,
+    screenshots: [kanelaPreview],
+    liveUrl: 'https://kanela-food-coquimbito.vercel.app/',
+  },
+  {
+    title: 'Karting Modelo',
+    category: 'Web Deportiva',
+    description: 'Página web moderna y deportiva dedicada al mundo del karting. Calendarios de carreras, posiciones, galerías de fotos y novedades de la categoría.',
+    tech: ['React', 'TypeScript', 'Tailwind', 'Framer Motion'],
+    coverImage: kartingPreview,
+    screenshots: [kartingPreview],
+    liveUrl: 'https://karting-modelo-web.vercel.app/',
   },
   {
     title: '5INCO Indumentaria',
     category: 'E-commerce + Gestión',
-    description: 'Plataforma web para tienda de ropa con panel de administración completo. Gestión de productos, stock por talle y color, categorías, panel de cajero para ventas diarias, sistema de avisos internos, descuentos y destacados. Control total del negocio en un solo lugar.',
+    description: 'Plataforma web para tienda de ropa con panel de administración completo. Gestión de productos, stock por talle y color, categorías y panel de cajero para ventas.',
     tech: ['React', 'TypeScript', 'Supabase', 'Tailwind', 'Framer Motion'],
-    coverImage: cincoCover,
-    screenshots: [
-      cincoHero,
-      cincoCatalogo,
-      cincoContacto,
-      cincoAdmin,
-    ],
+    coverImage: cincoPreview,
+    screenshots: [cincoPreview],
+    liveUrl: 'https://55inco.vercel.app/',
   },
 ];
 
