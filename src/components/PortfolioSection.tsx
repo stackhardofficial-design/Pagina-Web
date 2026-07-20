@@ -23,10 +23,23 @@ import senderosNosotros from '@/assets/projects/senderos/nosotros.png';
 import senderosAliados from '@/assets/projects/senderos/aliados.png';
 import senderosMaquinaria from '@/assets/projects/senderos/maquinaria.png';
 
+// Sistema de Ropa screenshots
+import sr1 from '@/assets/projects/sistema-ropa/1.png';
+import sr2 from '@/assets/projects/sistema-ropa/2.png';
+import sr3 from '@/assets/projects/sistema-ropa/3.png';
+import sr4 from '@/assets/projects/sistema-ropa/4.png';
+import sr5 from '@/assets/projects/sistema-ropa/5.png';
+import sr6 from '@/assets/projects/sistema-ropa/6.png';
+import sr7 from '@/assets/projects/sistema-ropa/7.png';
+import sr8 from '@/assets/projects/sistema-ropa/8.png';
+import sr9 from '@/assets/projects/sistema-ropa/9.png';
+import sr10 from '@/assets/projects/sistema-ropa/10.png';
+import sr11 from '@/assets/projects/sistema-ropa/11.png';
+
 const projects: Project[] = [
   {
     title: 'T.A.B.E – Sistema Académico',
-    category: 'Aplicación Web / SaaS',
+    category: 'Aplicación Web',
     description: 'Plataforma integral para mejorar el rendimiento académico. Dashboard con métricas, plan de carrera, editor tipo Notion, flashcards, biblioteca de recursos y calendario.',
     tech: ['React', 'TypeScript', 'Supabase', 'Tailwind', 'Framer Motion'],
     coverImage: cincoPreview,
@@ -41,7 +54,7 @@ const projects: Project[] = [
   },
   {
     title: 'Senderos del Puente',
-    category: 'Web Institucional',
+    category: 'Sitio Web',
     description: 'Página web institucional para lavadero de zanahorias de alcance nacional. Muestra todo el proceso desde el cultivo hasta la distribución con videos, imágenes y animaciones dinámicas.',
     tech: ['React', 'TypeScript', 'Tailwind', 'Framer Motion'],
     coverImage: senderosHero,
@@ -55,7 +68,7 @@ const projects: Project[] = [
   },
   {
     title: 'Carnes Carrizo',
-    category: 'E-commerce / Catálogo',
+    category: 'Sitio Web',
     description: 'Sitio web moderno para carnicería y distribuidora de carne premium. Permite ver ofertas, catálogo de cortes, ubicación y contacto directo de forma rápida.',
     tech: ['React', 'TypeScript', 'Tailwind', 'Framer Motion'],
     coverImage: kartingPreview,
@@ -64,7 +77,7 @@ const projects: Project[] = [
   },
   {
     title: 'Kanela Food',
-    category: 'Carta Digital / Web',
+    category: 'Sitio Web',
     description: 'Carta digital interactiva y sitio web para cafetería y hamburguesería en Coquimbito. Interfaz fluida y atractiva optimizada para móviles.',
     tech: ['React', 'TypeScript', 'Tailwind', 'Framer Motion'],
     coverImage: carrizoPreview,
@@ -73,7 +86,7 @@ const projects: Project[] = [
   },
   {
     title: 'Karting Modelo',
-    category: 'Web Deportiva',
+    category: 'Sitio Web',
     description: 'Página web moderna y deportiva dedicada al mundo del karting. Calendarios de carreras, posiciones, galerías de fotos y novedades de la categoría.',
     tech: ['React', 'TypeScript', 'Tailwind', 'Framer Motion'],
     coverImage: tabePreview,
@@ -81,12 +94,12 @@ const projects: Project[] = [
     liveUrl: 'https://karting-modelo-web.vercel.app/',
   },
   {
-    title: '5INCO Indumentaria',
-    category: 'E-commerce + Gestión',
+    title: 'Sistema de Ropa',
+    category: 'Sistema de Gestión',
     description: 'Plataforma web para tienda de ropa con panel de administración completo. Gestión de productos, stock por talle y color, categorías y panel de cajero para ventas.',
     tech: ['React', 'TypeScript', 'Supabase', 'Tailwind', 'Framer Motion'],
-    coverImage: kanelaPreview,
-    screenshots: [kanelaPreview],
+    coverImage: sr1,
+    screenshots: [sr1, sr2, sr3, sr4, sr5, sr6, sr7, sr8, sr9, sr10, sr11],
     liveUrl: 'https://55inco.vercel.app/',
   },
 ];
