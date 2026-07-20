@@ -1,6 +1,7 @@
 import { useState, useEffect } from 'react';
 import { Menu, X } from 'lucide-react';
 import { motion, AnimatePresence } from 'framer-motion';
+import logoImg from '../assets/logo.jpg';
 
 const navItems = [
   { label: 'Inicio', href: '#hero' },
@@ -49,7 +50,7 @@ const Navbar = () => {
             }}
           >
             <img 
-              src="/logo.jpg" 
+              src={logoImg} 
               alt="StackHard Logo" 
               className="w-8 h-8 object-contain rounded-md border border-primary/20 group-hover:border-primary transition-all duration-300"
             />

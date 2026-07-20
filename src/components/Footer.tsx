@@ -1,4 +1,4 @@
-
+import logoImg from '../assets/logo.jpg';
 
 const Footer = () => {
   const currentYear = new Date().getFullYear();
@@ -11,7 +11,7 @@ const Footer = () => {
           <div className="flex flex-col items-center md:items-start gap-2">
             <a href="#hero" className="flex items-center gap-2 group">
               <img 
-                src="/logo.jpg" 
+                src={logoImg} 
                 alt="StackHard Logo" 
                 className="w-6 h-6 object-contain rounded-md" 
               />
