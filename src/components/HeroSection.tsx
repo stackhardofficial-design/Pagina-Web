@@ -22,20 +22,20 @@ const HeroSection = () => {
       />
       
       {/* Lightfall Background */}
-      <div className="absolute inset-0 z-0 overflow-hidden">
+      <div className="absolute inset-0 z-0 overflow-hidden opacity-80">
         <Lightfall
           colors={['#ff724b', '#ff3b11', '#733f19']}
           backgroundColor="#080a0c"
-          speed={0.5}
-          streakCount={3}
-          streakWidth={1}
-          streakLength={1}
-          glow={0.6}
-          density={0.4}
-          twinkle={0.5}
-          zoom={2.5}
-          backgroundGlow={0.2}
-          opacity={0.3}
+          speed={0.7}
+          streakCount={5}
+          streakWidth={1.5}
+          streakLength={1.2}
+          glow={0.8}
+          density={0.7}
+          twinkle={0.8}
+          zoom={2}
+          backgroundGlow={0.5}
+          opacity={1}
           mouseInteraction={true}
           mouseStrength={0.8}
           mouseRadius={0.7}
@@ -43,7 +43,7 @@ const HeroSection = () => {
       </div>
 
       {/* Gradient overlay for better text readability */}
-      <div className="absolute inset-0 z-[1] bg-gradient-to-b from-background/95 via-background/80 to-background pointer-events-none" />
+      <div className="absolute inset-0 z-[1] bg-gradient-to-b from-background/50 via-background/30 to-background pointer-events-none" />
       
       {/* Floating particles */}
       <div className="z-[2] relative">
