@@ -21,31 +21,33 @@ const HeroSection = () => {
         style={{ backgroundImage: `url(${heroBg})` }}
       />
       
-      {/* Gradient overlay for better text readability */}
-      <div className="absolute inset-0 bg-gradient-to-b from-background/70 via-background/60 to-background pointer-events-none" />
-      
-      {/* Floating particles */}
-      <FloatingParticles />
-
       {/* Lightfall Background */}
       <div className="absolute inset-0 z-0 overflow-hidden">
         <Lightfall
           colors={['#ff724b', '#ff3b11', '#733f19']}
           backgroundColor="#080a0c"
-          speed={1}
-          streakCount={8}
+          speed={0.5}
+          streakCount={3}
           streakWidth={1}
           streakLength={1}
-          glow={1}
-          density={1}
-          twinkle={1}
-          zoom={2}
-          backgroundGlow={1}
-          opacity={1}
+          glow={0.6}
+          density={0.4}
+          twinkle={0.5}
+          zoom={2.5}
+          backgroundGlow={0.2}
+          opacity={0.3}
           mouseInteraction={true}
-          mouseStrength={1}
-          mouseRadius={0.6}
+          mouseStrength={0.8}
+          mouseRadius={0.7}
         />
+      </div>
+
+      {/* Gradient overlay for better text readability */}
+      <div className="absolute inset-0 z-[1] bg-gradient-to-b from-background/95 via-background/80 to-background pointer-events-none" />
+      
+      {/* Floating particles */}
+      <div className="z-[2] relative">
+        <FloatingParticles />
       </div>
       
       {/* Grid pattern overlay */}
