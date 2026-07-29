@@ -8,6 +8,7 @@ const navItems = [
   { label: 'Sobre mí', href: '#about' },
   { label: 'Servicios', href: '#services' },
   { label: 'Portfolio', href: '#portfolio' },
+  { label: 'Sistemas', href: '#sistemas' },
   { label: 'Contacto', href: '#contact' },
 ];
 
