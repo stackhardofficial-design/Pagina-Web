@@ -2,6 +2,7 @@ import { motion } from 'framer-motion';
 import { ChevronDown, MessageCircle, Mail, ArrowRight } from 'lucide-react';
 import TypingText from './TypingText';
 import FloatingParticles from './FloatingParticles';
+import Ballpit from './Ballpit';
 import heroBg from '@/assets/hero-bg.jpg';
 
 const HeroSection = () => {
@@ -25,6 +26,18 @@ const HeroSection = () => {
       
       {/* Floating particles */}
       <FloatingParticles />
+
+      {/* Ballpit Background */}
+      <div className="absolute inset-0 z-0 overflow-hidden">
+        <Ballpit
+          count={100}
+          gravity={0.01}
+          friction={0.9975}
+          wallBounce={0.95}
+          followCursor={true}
+          colors={["#ea6d16", "#ffffff", "#0a0c10", "#21262d"]}
+        />
+      </div>
       
       {/* Grid pattern overlay */}
       <div className="absolute inset-0 grid-pattern opacity-20 pointer-events-none" />

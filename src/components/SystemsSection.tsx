@@ -119,7 +119,8 @@ const SystemsSection = () => {
             </span>
             <div className="mb-6">
               <TrueFocus
-                sentence="Sistemas de gestión"
+                sentence="Sistemas-de Gestión"
+                separator="-"
                 manualMode={false}
                 blurAmount={4}
                 borderColor="hsl(24, 85%, 55%)"
