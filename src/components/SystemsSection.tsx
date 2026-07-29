@@ -1,6 +1,7 @@
 import { motion, AnimatePresence, useInView } from 'framer-motion';
 import { useRef, useState } from 'react';
 import { X, ChevronLeft, ChevronRight } from 'lucide-react';
+import TrueFocus from './TrueFocus';
 
 // Sistema de Ropa
 import ropaLogo from '@/assets/systems/ropa/logo.png';
@@ -116,9 +117,17 @@ const SystemsSection = () => {
             <span className="inline-block font-mono text-sm text-primary mb-4">
               {'// SISTEMAS'}
             </span>
-            <h2 className="font-mono text-3xl md:text-4xl lg:text-5xl font-bold mb-6 text-foreground">
-              Sistemas de <span className="text-primary text-glow">gestión</span>
-            </h2>
+            <div className="mb-6">
+              <TrueFocus
+                sentence="Sistemas de gestión"
+                manualMode={false}
+                blurAmount={4}
+                borderColor="hsl(24, 85%, 55%)"
+                glowColor="hsl(24 85% 55% / 0.6)"
+                animationDuration={0.6}
+                pauseBetweenAnimations={1.5}
+              />
+            </div>
             <p className="text-muted-foreground max-w-2xl mx-auto text-lg">
               Soluciones a medida para automatizar y optimizar la operación de tu negocio.
             </p>
