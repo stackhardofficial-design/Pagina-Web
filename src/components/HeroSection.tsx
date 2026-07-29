@@ -2,7 +2,7 @@ import { motion } from 'framer-motion';
 import { ChevronDown, MessageCircle, Mail, ArrowRight } from 'lucide-react';
 import TypingText from './TypingText';
 import FloatingParticles from './FloatingParticles';
-import Ballpit from './Ballpit';
+import Lightfall from './Lightfall';
 import heroBg from '@/assets/hero-bg.jpg';
 
 const HeroSection = () => {
@@ -27,15 +27,24 @@ const HeroSection = () => {
       {/* Floating particles */}
       <FloatingParticles />
 
-      {/* Ballpit Background */}
+      {/* Lightfall Background */}
       <div className="absolute inset-0 z-0 overflow-hidden">
-        <Ballpit
-          count={100}
-          gravity={0.01}
-          friction={0.9975}
-          wallBounce={0.95}
-          followCursor={true}
-          colors={["#ea6d16", "#ffffff", "#0a0c10", "#21262d"]}
+        <Lightfall
+          colors={['#ff724b', '#ff3b11', '#733f19']}
+          backgroundColor="#080a0c"
+          speed={1}
+          streakCount={8}
+          streakWidth={1}
+          streakLength={1}
+          glow={1}
+          density={1}
+          twinkle={1}
+          zoom={2}
+          backgroundGlow={1}
+          opacity={1}
+          mouseInteraction={true}
+          mouseStrength={1}
+          mouseRadius={0.6}
         />
       </div>
       

@@ -1,4 +1,4 @@
-import logoImg from '../assets/logo.jpg';
+import logoImg from '../assets/logo.png';
 import LogoLoop from './LogoLoop';
 
 // SVG icons as React nodes
